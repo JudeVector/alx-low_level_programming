@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
-* main - print out data types in C and its sizes
-* Coded by Jude Ndubuisi
+* main - Entry point
+*
 * Return: 0
+*
 */
 int main(void)
 {
