@@ -16,13 +16,13 @@ To determine the size of a specific data type in C, you can use the unary operat
 
 To compile C code using "gcc," you need to run the command "gcc filename.c -o outputfile," where "filename.c" is the name of the source file and "outputfile" is the name of the resulting executable file. By default, the resulting program will be named "a.out."
 
-The official Holberton C coding style is designed to make code easy to read and understand. To check your code against this style, you can use the "betty-style" and "betty-doc" tools. These tools will analyze your code and provide suggestions for improving its style and readability.
+The official ALX Software Engineering C coding style is designed to make code easy to read and understand. To check your code against this style, you can use the "betty-style" and "betty-doc" tools. These tools will analyze your code and provide suggestions for improving its style and readability.
 
 When using a standard library function in C, you need to include the appropriate header file in your source code. For example, to use the "printf" function, you need to include the "stdio.h" header file.
 
 The main function in a C program is responsible for returning a value that indicates whether the program completed successfully or not. By convention, a value of 0 is returned to indicate success, while a value other than 0 indicates an error or failure.
 
-To write C code for this project, you can use any of the following editors: vi, vim, or emacs. Your code will be compiled on Ubuntu 14.04 LTS using gcc 4.8.4, so make sure your code is compatible with this environment. Additionally, make sure your code follows the Betty style, as it will be checked using betty-style.pl and betty-doc.pl. Good luck!
+To write C code for this project, you can use any of the following editors: vi, vim, or emacs. Your code will be compiled on Ubuntu 20.04 LTS using gcc 9.4.0, so make sure your code is compatible with this environment. Additionally, make sure your code follows the Betty style, as it will be checked using betty-style.pl and betty-doc.pl. Good luck!
 
 
 
