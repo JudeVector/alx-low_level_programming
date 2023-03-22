@@ -3,39 +3,30 @@
 #include <stdio.h>
 
 /**
- * main - main function
- * @argc: argument count
- * @argv: string of arguments in array
- * Return: 0
- */
-
+  * main - ...
+  * @argc: ...
+  * @argv: ...
+  *
+  * Return: ...
+  */
 int main(int argc, char *argv[])
 {
-	int a, b;
-	int (*o)(int, int);
+	int (*oprt)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2][1] != '\0')
+
+	oprt = get_op_func(argv[2]);
+
+	if (!oprt)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	o = get_op_func(argv[2]);
-	if (o == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-
-	printf("%d\n", o(a, b));
-
+	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
