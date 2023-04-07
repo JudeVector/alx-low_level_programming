@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * binary_power - Custom implementation of exponentiation.
+ * _custom_power - Custom implementation of exponentiation.
  * @base: The base value.
  * @pow: The power value.
  *
  * Return: The result of base raised to the power of pow.
  */
-unsigned long int binary_power(unsigned int base, unsigned int pow)
+unsigned long int _custom_power(unsigned int base, unsigned int pow)
 {
 	unsigned long int num = 1;
 	unsigned int i;
@@ -25,13 +25,12 @@ unsigned long int binary_power(unsigned int base, unsigned int pow)
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int dev = binary_power(2, sizeof(unsigned long int) * 8 - 1);
+	unsigned long int dev = _custom_power(2, sizeof(unsigned long int) * 8 - 1);
 	char flag = 0;
 
 	while (dev != 0)
 	{
 		unsigned long int result = n & dev;
-
 		if (result == dev)
 		{
 			flag = 1;
