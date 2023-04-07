@@ -10,7 +10,6 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int num_bits = sizeof(unsigned long int) * 8;
 	unsigned long int xor_result = n ^ m;
 	unsigned int num_flips = 0;
 
