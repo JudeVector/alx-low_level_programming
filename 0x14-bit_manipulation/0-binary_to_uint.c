@@ -9,20 +9,29 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
+	int i;
 	unsigned int num = 0;
-	int i = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 
-	while (b[i] != '\0')
+	/* Loop through each character in the string */
+	for (i = 0; b[i] != '\0'; i++)
 	{
+		/* Check for invalid characters */
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
+	}
 
+	/* Convert binary digits to unsigned integer */
+	for (i = 0; b[i] != '\0'; i++)
+	{
+		/* Left shift by 1, equivalent to multiplying by 2 */
 		num <<= 1;
-		num += (b[i] - '0');
-		i++;
+
+		/* If the current digit is '1', add it to the result */
+		if (b[i] == '1')
+			num += 1;
 	}
 
 	return (num);
