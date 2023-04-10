@@ -109,5 +109,10 @@ int main(int argc, char *argv[])
 	} while (lenr == 1024);
 
 	close_from = close(fd_from);
-	check100(close_from, fd
+	check100(close_from, fd_from);
+	close_to = close(fd_to);
+	check100(close_to, fd_to);
+
+	return (0);
+}
 
