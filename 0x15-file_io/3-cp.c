@@ -20,7 +20,7 @@ void check_argc(int argc)
 /**
  * check_file_from - checks that file_from exists and can be read
  * @check: checks if true or false
- * @file: file_from name
+ * @file: file_from name accessed anywhere
  * @fd_from: file descriptor of file_from, or -1
  * @fd_to: file descriptor of file_to, or -1
  *
@@ -41,7 +41,7 @@ void check_file_from(ssize_t check, char *file, int fd_from, int fd_to)
 
 /**
  * check_file_to - checks that file_to was created and/or can be written to
- * @check: checks if true or false
+ * @check: checks if true or false and render it
  * @file: file_to name
  * @fd_from: file descriptor of file_from, or -1
  * @fd_to: file descriptor of file_to, or -1
@@ -78,7 +78,7 @@ void check_close(int check, int fd)
 }
 
 /**
- * main - copies the content of a file to another file.
+ * main - copies the  another file and main file.
  * @argc: number of arguments passed
  * @argv: array of pointers to the arguments
  *
