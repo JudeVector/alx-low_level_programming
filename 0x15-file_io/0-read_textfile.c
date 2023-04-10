@@ -1,5 +1,4 @@
-i#include "main.h"
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -26,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	bytes_read = read(file_desc, buffer, letters);
 	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
 
-	if (file_desc == -1 || bytes_read == -1 || bytes_written == -1
+	if (file_desc == -1 || bytes_read == -1 || bytes_written == -1 
 	|| bytes_written != bytes_read)
 	{
 		free(buffer);
