@@ -15,21 +15,17 @@ unsigned int binary_to_uint(const char *b)
 	if (!b)
 		return (0);
 
-	/* Loop through each character in the string */
 	for (zyk = 0; b[zyk] != '\0'; zyk++)
 	{
-		/* Check for invalid characters */
+
 		if (b[zyk] != '0' && b[zyk] != '1')
 			return (0);
 	}
 
-	/* Convert binary digits to unsigned integer */
 	for (zyk = 0; b[zyk] != '\0'; zyk++)
 	{
-		/* Left shift by 1, equivalent to multiplying by 2 */
 		number <<= 1;
 
-		/* If the current digit is '1', add it to the result */
 		if (b[zyk] == '1')
 			number += 1;
 	}
